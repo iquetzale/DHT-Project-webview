@@ -1,0 +1,24 @@
+html { 
+    font-family: Arial; 
+    display: inline-block; 
+    margin: 0px auto; 
+    text-align: center;
+} 
+h2 { 
+    font-size: 4vw; 
+    color: whitesmoke; 
+    padding-top: 10vh;} 
+p { 
+    font-size: 6vw;  
+    color: whitesmoke;} 
+.units { 
+    font-size: 4vw;  
+    color: whitesmoke;} 
+.dht-labels{ 
+    font-size: 
+    4vw; vertical-align:middle; 
+    padding-bottom: 15px;} 
+.background {
+    background-image: url("../DHT-Project-webview/background.jpg"); 
+    width: 100%; 
+    height: 100%;}
