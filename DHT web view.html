@@ -2,18 +2,12 @@
   <head> 
     <meta http-equiv='refresh' content='4'/> 
     <meta name='viewport' content='width=device-width, initial-scale=1'> 
+    <link rel='stylesheet' href = "../DHT-Project-webview/styles.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous'> 
     <title>Temperature and Humidity for Air Conditioner</title> 
-    <style> 
-    html { font-family: Arial; display: inline-block; margin: 0px auto; text-align: center;} 
-    h2 { font-size: 8vw; } 
-    p { font-size: 8vw; } 
-    .units { font-size: 4vw; } 
-    .dht-labels{ font-size: 5vw; vertical-align:middle; padding-bottom: 15px;} 
-    </style> 
   </head>
-  
-  <body> 
+  <body style="margin: 0;"> 
+    <div class = "background">
       <h2>Room Temperature and Humidity</h2> 
       <p> 
         <i class='fas fa-thermometer-half' style='color:#ca3517;'></i> 
@@ -29,5 +23,6 @@
         <!-- <span>%.2f</span>  -->
         <sup class='units'>&percnt;</sup> 
       </p> 
+    </div>
   </body> 
 </html>
