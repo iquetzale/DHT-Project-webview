@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="/styles.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous'>
+    <title>Temperature and Humidity for Air Conditioner</title>
+</head>
+<body>
+    <div class = "background">
+        <h2>Room Temperature and Humidity</h2>
+        <p>
+            <i class='fas fa-thermometer-half' style='color:#ca3517;'></i>
+            <span id="temp">Temperature </span>
+            <sup class='units'>&deg;C</sup>
+        </p>
+        <p>
+            <i class='fas fa-tint' style='color:#00add6;'></i>
+            <span id="humid">Humidity </span>
+            <sup class='units'>&percnt;</sup>
+        </p>
+
+        <p id="ac">Turn A/C on/off manually</p>
+        <button id="onOffButton"><i class="fas fa-power-off"></i></button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+        <script>
+            const socket = io();
+
+            socket.on('temp_value', (data) => {
+                const messagesElement = document.getElementById('temp');
+                messagesElement.textContent=`Temperature: ${data.message}`;
+            });
+
+            socket.on('humidity_value', (data) => {
+                const messagesElement = document.getElementById('humid');
+                messagesElement.textContent=`Humidity: ${data.message}`;
+            });
+
+            const button = document.getElementById('onOffButton');
+            button.addEventListener('click', () => {
+                socket.emit('button_clicked');
+            });
+        </script>
+    </div>
+</body>
+</html>
