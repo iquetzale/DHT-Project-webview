@@ -3,22 +3,37 @@ html {
     display: inline-block; 
     margin: 0px auto; 
     text-align: center;
-} 
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    height: 90vh;
+    color: white;
+}
 h2 { 
     font-size: 4vw; 
     color: whitesmoke; 
-    padding-top: 10vh;} 
+} 
 p { 
-    font-size: 6vw;  
-    color: whitesmoke;} 
+    font-size: 3vw;  
+    color: whitesmoke;
+} 
 .units { 
-    font-size: 4vw;  
-    color: whitesmoke;} 
-.dht-labels{ 
-    font-size: 
-    4vw; vertical-align:middle; 
-    padding-bottom: 15px;} 
-.background {
-    background-image: url("../DHT-Project-webview/background.jpg"); 
-    width: 100%; 
-    height: 100%;}
+    font-size: 1.5vw;  
+    color: whitesmoke;
+} 
+#onOffButton {
+    height: 4vw;
+    width: 10vw;
+    color: red;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(191, 191, 191);
+    font-size: 1.25vw;
+}
+#ac {
+    font-size: 1.5vw;
+}
